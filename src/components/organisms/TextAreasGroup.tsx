@@ -53,7 +53,7 @@ export const TextAreasGroup: React.FC = () => {
       <Button onClick={createTextArea} label="New tag" />
       <Button onClick={handleReplace} label="Replace" />
 
-      <p>Replaced Text: {replacedText}</p>
+      <p className="whitespace-pre-line">Replaced Text: {replacedText}</p>
     </div>
   );
 }
