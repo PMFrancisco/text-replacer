@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface TextareaProps {
   value?: string;
   placeholder: string;
@@ -12,6 +10,6 @@ export const Textarea: React.FC<TextareaProps> = ({ value, placeholder, onChange
     value={value}
     placeholder={placeholder}
     onChange={onChange}
-    className={`w-full max-w-96 h-32 p-2 border-2 border-gray-300 rounded-lg ${className}`}
+    className={`w-full p-2 border-2 border-gray-300 rounded-lg ${className}`}
   />
 );

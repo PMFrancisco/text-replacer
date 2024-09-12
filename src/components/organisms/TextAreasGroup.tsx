@@ -36,8 +36,8 @@ export const TextAreasGroup: React.FC = () => {
   };
 
   return (
-    <div>
-      <Textarea placeholder="Enter text with tags here..." onChange={handleTextChange} />
+    <div className='w-full max-w-[720px]'>
+      <Textarea placeholder="Enter text with tags here..." onChange={handleTextChange} className="h-32" />
 
       {textAreas.map((area, index) => (
         <TagTextarea
@@ -47,10 +47,11 @@ export const TextAreasGroup: React.FC = () => {
           onChange={(e) => handleNewTextChange(index, e)}
         />
       ))}
+      <div className='flex items-center gap-2'>
+        <Textarea placeholder="Set new tag here..." onChange={handleNewTag} />
 
-      <Textarea placeholder="Set new tag here..." onChange={handleNewTag} />
-
-      <Button onClick={createTextArea} label="New tag" />
+        <Button onClick={createTextArea} label="New tag" />
+      </div>
       <Button onClick={handleReplace} label="Replace" />
 
       <p className="whitespace-pre-line">Replaced Text: {replacedText}</p>

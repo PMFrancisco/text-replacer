@@ -1,4 +1,3 @@
-import React from 'react';
 import { Textarea } from '../atoms/Textarea';
 
 interface TagTextareaProps {
